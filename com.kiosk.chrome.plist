@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.kiosk.chrome</string>
+    
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/kiosk/kiosk_monitor.sh</string>
+    </array>
+    
+    <key>RunAtLoad</key>
+    <true/>
+    
+    <key>KeepAlive</key>
+    <true/>
+    
+    <key>UserName</key>
+    <string>kiosk</string>
+    
+    <key>GroupName</key>
+    <string>staff</string>
+    
+    <key>StandardOutPath</key>
+    <string>/var/log/kiosk_monitor.log</string>
+    
+    <key>StandardErrorPath</key>
+    <string>/var/log/kiosk_monitor.log</string>
+    
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>DISPLAY</key>
+        <string>:0</string>
+        <key>HOME</key>
+        <string>/Users/kiosk</string>
+    </dict>
+    
+    <key>ExitTimeOut</key>
+    <integer>30</integer>
+</dict>
+</plist>

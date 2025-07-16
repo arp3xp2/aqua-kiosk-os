@@ -1,0 +1,36 @@
+# macOS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Chrome installers and DMG files
+*.dmg
+google-chrome*.dmg
+
+# Log files
+*.log
+/var/log/kiosk_firewall.log
+
+# Backup files
+*backup*
+*_backup_*
+ipfw_backup_*.txt
+
+# Archive files
+*.zip
+*.tar.gz
+
+# Temporary files
+*.tmp
+*.temp
+/tmp/*
+
+# User-specific configuration files that shouldn't be committed
+kiosk_config_local.sh
+
+# AppleScript compiled files
+*.scpt
