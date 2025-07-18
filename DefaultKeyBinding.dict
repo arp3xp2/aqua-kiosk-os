@@ -1,0 +1,36 @@
+{
+    /* Disable Cmd+Q (Quit Application) */
+    "^$q" = "noop:";
+    "@$q" = "noop:";
+    
+    /* Disable Cmd+Tab (App Switching) */
+    "^$\U0009" = "noop:";
+    "@$\U0009" = "noop:";
+    
+    /* Disable Cmd+Shift+Tab (Reverse App Switching) */
+    "^$@\U0009" = "noop:";
+    "@$@\U0009" = "noop:";
+    
+    /* Disable Cmd+H (Hide Application) */
+    "^$h" = "noop:";
+    "@$h" = "noop:";
+    
+    /* Disable Cmd+M (Minimize Window) */
+    "^$m" = "noop:";
+    "@$m" = "noop:";
+    
+    /* Disable Cmd+W (Close Window) */
+    "^$w" = "noop:";
+    "@$w" = "noop:";
+    
+    /* Disable Cmd+` (Cycle Windows) */
+    "^$`" = "noop:";
+    "@$`" = "noop:";
+    
+    /* Disable F11 (Show Desktop) */
+    "\UF70E" = "noop:";
+    
+    /* Disable Mission Control shortcuts */
+    "^$\U2191" = "noop:";  /* Ctrl+Cmd+Up */
+    "@$\U2191" = "noop:";  /* Cmd+Up */
+}
