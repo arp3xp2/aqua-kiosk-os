@@ -12,7 +12,7 @@
 - **🚀 One-command setup**: Automated installation and configuration
 - **🔄 Self-monitoring**: Auto-restarts Chrome if closed or crashed
 - **⚡ Fast startup**: Optimized launch sequence via KioskLauncher.app
-- **🛡️ Escape-proof**: Disables Cmd+Q, Cmd+Tab, and other exit methods
+- **🛡️ Auto-restart protection**: Chrome automatically restarts if quit
 - **🔧 Centralized config**: Single file controls all settings
 
 ## Quick Start
@@ -64,7 +64,7 @@ KIOSK_USER="kiosk"                             # Kiosk account name
 This script will:
 - Create the kiosk user account (if needed)
 - Install Chrome 49.0.2623.112 for Snow Leopard
-- Configure security settings and key bindings
+- Configure security settings and monitoring system
 - Set up the monitoring daemon
 - Remove Chrome auto-updater to prevent permission dialogs
 
@@ -150,24 +150,24 @@ Boot → Auto-login → LaunchDaemon → kiosk_monitor.sh → KioskLauncher.app 
 - **`quick_setup.sh`**: Automated installer and configurator
 - **`KioskLauncher.sh`**: Chrome launcher script (copied to user directory)
 - **`kiosk_monitor.sh`**: System monitor that launches KioskLauncher.app
-- **`DefaultKeyBinding.dict`**: Disables Cmd+Q, Cmd+Tab, and other escape keys
+- **`DefaultKeyBinding.dict`**: Key binding customizations (planned feature)
 - **`com.kiosk.chrome.plist`**: LaunchDaemon for system-level monitoring
 
 ## Security Features
 
 ### What This System Provides
 - **System-level restrictions**: Parental Controls limit user to Chrome only
-- **Key binding security**: Disables common escape routes (Cmd+Q, Cmd+Tab, etc.)
-- **Auto-restart protection**: Monitors and relaunches Chrome if closed
+- **Auto-restart protection**: Monitors and relaunches Chrome if closed (10-second intervals)
 - **Admin emergency access**: Cmd+Shift+Q+Q + password for authorized users
 - **Simple Finder**: Restricts file system access to approved locations
+- **Minimal desktop exposure**: Brief desktop access before Chrome auto-restarts
 
 ### What This System Doesn't Provide
 - Complete security isolation (determined users may find other methods)
 - Protection against physical access to hardware
 - Network-level monitoring or restrictions
 
-**Note**: This system is designed for **trusted environments** where you want to prevent casual users from accessing the system while maintaining ease of administration.
+**Note**: This system is designed for **trusted environments** where you want to prevent casual users from accessing the system while maintaining ease of administration. Users may briefly access the desktop if they quit Chrome, but the system automatically restarts Chrome within 10 seconds.
 
 ## Troubleshooting
 
@@ -237,7 +237,7 @@ This project is licensed under the Sustainable Use License - see the [LICENSE](L
 - **Manual step required**: Parental Controls must be configured via System Preferences after automated setup
 - **Chrome version**: Must use Chrome 49.0.2623.112 - newer versions don't support Snow Leopard
 - **Emergency exit**: Admin can always exit with Cmd+Shift+Q+Q + password
-- **DefaultKeyBinding.dict**: Automatically installed to disable common escape keys
+- **Monitoring system**: Chrome automatically restarts within 10 seconds if closed
 
 ---
 

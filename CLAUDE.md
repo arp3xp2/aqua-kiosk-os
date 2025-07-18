@@ -9,7 +9,7 @@
 - **`quick_setup.sh`**: Main automated installer (run from admin account, NOT sudo)
 - **`KioskLauncher.sh`**: Chrome launcher script (copied to user directory)
 - **`kiosk_monitor.sh`**: Monitor daemon that launches KioskLauncher.app for faster startup
-- **`DefaultKeyBinding.dict`**: Disables Cmd+Q, Cmd+Tab, and other escape keys
+- **`DefaultKeyBinding.dict`**: Key binding customizations (planned feature)
 - **`com.kiosk.chrome.plist`**: LaunchDaemon for system-level monitoring
 
 ## Configuration (config.sh)
