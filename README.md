@@ -4,7 +4,9 @@
 [![macOS](https://img.shields.io/badge/macOS-10.6_Snow_Leopard-blue.svg)](https://en.wikipedia.org/wiki/Mac_OS_X_Snow_Leopard)
 [![Chrome](https://img.shields.io/badge/Chrome-49.0.2623.112-green.svg)](https://google-chrome.en.uptodown.com/mac/versions)
 
-> Transform any Mac OS X 10.6 Snow Leopard system into a secure, production-ready kiosk for museums, retail, education, and public displays.
+Transform any Mac OS X 10.6 Snow Leopard system into a secure, production-ready kiosk for museums, retail, education, and public displays.
+
+This kiosk system for vintage Macs opens Chrome 49 in fullscreen kiosk mode without all browser chrome (no pun intended), removes Chrome's auto-updater to prevent permission dialogs, and automatically restarts Chrome in kiosk mode if closed. It uses Mac OS X 10.6's Parental Controls to restrict users to Chrome only, creating a simple but effective kiosk solution for public displays. The setup script handles user creation, file installation, and daemon configuration automatically.
 
 ## Features
 
