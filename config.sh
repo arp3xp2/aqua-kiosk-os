@@ -21,9 +21,10 @@ ADMIN_PASSWORD="changeme123"
 # NETWORK CONFIGURATION
 # =======================
 
-# Primary domain for firewall whitelist (if firewall is enabled)
+# Primary domain for validation and future firewall features
 QUIZ_DOMAIN="your-website.com"
 
+# FUTURE FEATURE: Firewall configuration (not currently implemented)
 # Additional allowed domains for firewall (fonts, analytics, etc.)
 ADDITIONAL_DOMAINS=(
     "fonts.googleapis.com"
@@ -135,7 +136,7 @@ validate_config() {
     
     # Check if quiz domain is set
     if [ "$QUIZ_DOMAIN" = "your-website.com" ]; then
-        echo "⚠️  Warning: QUIZ_DOMAIN is set to placeholder. Update if using firewall."
+        echo "⚠️  Warning: QUIZ_DOMAIN is set to placeholder. Update for connectivity testing and future firewall features."
         warnings=$((warnings + 1))
     fi
     

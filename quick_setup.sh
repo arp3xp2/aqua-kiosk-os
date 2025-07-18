@@ -59,7 +59,7 @@ validate_config() {
         exit 1
     fi
     
-    if [ "$ADMIN_PASSWORD" = "admin123" ]; then
+    if [ "$ADMIN_PASSWORD" = "changeme123" ]; then
         print_warning "Using default admin password. Please change it in config.sh!"
     fi
     
@@ -234,7 +234,7 @@ setup_key_bindings() {
     if [ -f "DefaultKeyBinding.dict" ]; then
         sudo cp DefaultKeyBinding.dict "$keybindings_dir/"
         sudo chown $KIOSK_USER:staff "$keybindings_dir/DefaultKeyBinding.dict"
-        print_status "Key bindings configured - Cmd+Q, Cmd+Tab, etc. disabled"
+        print_status "Key bindings configured (Chrome will auto-restart if quit)"
     else
         print_error "DefaultKeyBinding.dict not found!"
         exit 1
@@ -305,7 +305,7 @@ show_final_instructions() {
     echo "   - Chrome should auto-launch and auto-restart if closed"
     echo ""
     echo -e "${BLUE}Security features enabled:${NC}"
-    echo "   - Cmd+Q, Cmd+Tab, Cmd+W disabled via key bindings"
+    echo "   - Key bindings installed - Chrome auto-restarts if quit"
     echo "   - Chrome auto-restarts if user exits (KeepAlive daemon)"
     echo "   - Parental Controls restrict to Chrome only"
     echo ""
